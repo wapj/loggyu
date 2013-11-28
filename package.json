@@ -3,9 +3,9 @@
     "version": "0.0.1",
     "description": "Very Simple Log Module created by Gyu",
     "author": {"name" : "wapj", "email": "wapj2000@gmail.com"},
-    "repogitory":{
-        "type":"git",
-        "url":"git://github.com/wapj/loggyu.git"
+    "repository":{
+        "type" : "git",
+        "url" : "https://github.com/wapj/loggyu"
     },
     "main":"./lib/Logger",
     "keywords":["logger", "log", "log4js"]

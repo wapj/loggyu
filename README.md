@@ -10,19 +10,17 @@ console.log() 만 썻더니 시간이나 어떤 라인에서 남긴로그인지 
 npm install loggyu
 ```
 
-혹은
-
-```shell
-npm update loggyu
-```
-
 package.json에 자동으로 추가하고 싶다면
 
 ```shell
 npm install loggyu --save
 ```
 
-이렇게 하시면 됩니다.
+package.json의 dependency에 설정을 한후에는 아래와 같이 하시면 됩니다. 
+
+```shell
+npm update loggyu
+```
 
 ### 사용법
 사용법은 엄청나게 간단 합니다. 
@@ -64,6 +62,3 @@ log.info({"obj":"이건 제이슨이라고요"});
 ```
 ### 라이센스
 라이센스는 많이들 쓰시는 "MIT" 라이센스를 사용합니다.
-
-
-
