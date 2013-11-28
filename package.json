@@ -1,0 +1,12 @@
+{
+    "name": "loggyu",
+    "version": "0.0.1",
+    "description": "Very Simple Log Module created by Gyu",
+    "author": {"name" : "wapj", "email": "wapj2000@gmail.com"},
+    "repogitory":{
+        "type":"git",
+        "url":"git://github.com/wapj/loggyu.git"
+    },
+    "main":"./lib/Logger",
+    "keywords":["logger", "log", "log4js"]
+}
