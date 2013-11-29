@@ -39,26 +39,32 @@ log.critical("오이런! 이건 당장 해결해야해요!");
 
 위와 같이 코딩하면 아래와 같이 출력 됩니다.
 ```
-[ DEBUG    ] 2013-11-3 21:23:52.59 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:12:5): 디버그 로그를 남기세요
-[ INFO     ] 2013-11-3 21:23:52.59 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:13:5): 정보를 찍는 로그입니다
-[ WARN     ] 2013-11-3 21:23:52.60 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:14:5): Warning! 뭔가 이상해요!
-[ ERROR    ] 2013-11-3 21:23:52.60 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:15:5): 에러!! 뭔가 잘못됐어요!
-[ CRITICAL ] 2013-11-3 21:23:52.60 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:16:5): 오이런! 이건 당장 해결해야해요!
+2013-11-5 11:41:56.445 'debug' (/Users/andy/dev/nodejs/loggyu/examples/test.js:12:5) 디버그 로그를 남기세요
+2013-11-5 11:41:56.446 'info' (/Users/andy/dev/nodejs/loggyu/examples/test.js:13:5) 정보를 찍는 로그입니다
+2013-11-5 11:41:56.446 'warn' (/Users/andy/dev/nodejs/loggyu/examples/test.js:14:5) Warning! 뭔가 이상해요!
+2013-11-5 11:41:56.446 'error' (/Users/andy/dev/nodejs/loggyu/examples/test.js:15:5) 에러!! 뭔가 잘못됐어요!
+2013-11-5 11:41:56.447 'critical' (/Users/andy/dev/nodejs/loggyu/examples/test.js:16:5) 오이런! 이건 당장 해결해야해요!
 ```
-네 위의 사용법이 다입니다.
 
-객체를 찍으면 객체가 튀어나옵니다.
+#### 포매팅도 됩니다.
+포매팅은 util.format() 함수와 동일하게 사용가능합니다. 
 
 ```javascript
 var loggyu = require('loggyu');
 var log = new loggyu();
 
-log.info({"obj":"이건 제이슨이라고요"});
+log.debug("%s %d %j", "이건 글자", 12345, {"JSONObject": "이거슨  제이슨입니당"});
 ```
 
-요건 요렇게 출력됩니다. 내부적으로 util.inspect를 호출하도록 되어 있습니다.
+이렇게 출력됩니다. 
+
 ```
-[ INFO     ] 2013-11-3 21:23:52.62 | (/Users/andy/dev/nodejs/loggyu/examples/test.js:19:5): { json: '이건 제이슨이라구요' }
+2013-11-5 11:44:48.940 'debug' (/Users/andy/dev/nodejs/loggyu/examples/test.js:19:5) 이건 글자 12345 {"JSONObject":"이거슨  제이슨입니당"}
 ```
+
+### 설정하기
+
+이 부분은 추후에 개발될 내용입니다.
+
 ### 라이센스
 라이센스는 많이들 쓰시는 "MIT" 라이센스를 사용합니다.
