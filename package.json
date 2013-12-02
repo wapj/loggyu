@@ -1,6 +1,6 @@
 {
     "name": "loggyu",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Very Simple Log Module created by Gyu",
     "author": {"name" : "wapj", "email": "wapj2000@gmail.com"},
     "repository":{
